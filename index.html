@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mow-N-Edge - Professional Lawn Care Services">
+    <title>Mow-N-Edge - Your Lawn Care Solution</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #2d5016 !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c2c 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            background-image: url(/images/header.jpg);
+            background-position: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: #2d5016;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: #2d5016;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #2d5016;
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .btn-primary {
+            background-color: #2d5016 !important;
+            border-color: #2d5016 !important;
+        }
+
+        .btn-primary:hover {
+            background-color: #4a7c2c !important;
+            border-color: #4a7c2c !important;
+        }
+
+        .collage-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .collage-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            height: 250px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .collage-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .collage-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .collage-item-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(45, 80, 22, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .collage-item:hover .collage-item-overlay {
+            opacity: 1;
+        }
+
+        .collage-item-text {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .collage-container {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .collage-item {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container bg-dark bg-opacity-50 p-5 rounded w-50 mx-auto">
+            <img src="/images/logo.webp" class="img-fluid mb-3" alt="Mow-N-Edge Logo">
+            <h1>Welcome to Mow-N-Edge</h1>
+            <p class="fs-2">Expert Lawn Care Services</p>
+            <a href="#contact" class="btn btn-light btn-lg">Get a free quote!</a>
+        </div>
+    </section>
+
+    <section class="briefing-section py-5 bg-secondary bg-opacity-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="section-title text-start">MOW-N-EDGE A NAME YOU CAN TRUST </h2>
+                    <p class="fs-4 text-start">At Mow-N-Edge Corporation, our mission is to provide exceptional lawn
+                        care service that exceed our clients' expectations. We are dedicated to enhancing the beauty and
+                        health of your outdoor spaces.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="/images/img1.webp" class="img-fluid rounded mx-auto d-block" alt="Lawn Care">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid bg-dark bg-opacity-10 w-100 p-5">
+        <h2 class="section-title text-center">Fast, clean and dependable service since 1980.</h2>
+        <p class="text-center fs-4">"The grass is always greener on your side of the fence with MOW-N-EDGE"</p>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card h-100 p-4">
+                        <div class="card-icon">🔧</div>
+                        <h5 class="card-title">Sprinkler Repair</h5>
+                        <p class="card-text">Sprinklers giving you problems, no problem. We can adjust, repair or
+                            replace sprinklers and program your controller. We are the pros.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 p-4">
+                        <div class="card-icon">🌿</div>
+                        <h5 class="card-title">Landscaping</h5>
+                        <p class="card-text">We have a landscape contractors license and install lawns, irrigation
+                            systems, patios, decks and complete yards. Tell us what you want and we will build it.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 p-4">
+                        <div class="card-icon">🐛</div>
+                        <h5 class="card-title">Yard Cleanup</h5>
+                        <p class="card-text">Mow-N-Edge has a State of California Pesticide Applicator's License. Don't
+                            allow pests to destroy your lawns, shrubs or trees.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 p-4">
+                        <div class="card-icon">🚨</div>
+                        <h5 class="card-title">Emergency Services</h5>
+                        <p class="card-text">Emergency services when you need it. We are just a phone call away and here
+                            to help.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>We are dedicated to providing the highest quality lawn care services in your area. With over 10 years of experience, our team of professionals is committed to keeping your lawn looking its best.</p>
+                    <p>Our services are tailored to meet the specific needs of your property, ensuring that your lawn remains healthy, beautiful, and well-maintained throughout the year.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/400x300" class="img-fluid rounded" alt="Team Photo">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Gallery -->
+    <div class="container-fluid">
+        <div class="row p-3 bg-secondary bg-opacity-10">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <img src="/images/gallery1.webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+
+                <img src="/images/gallery2.webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="/images/gallery3.webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
+
+                <img src="/images/gallery4.webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="/images/gallery5.webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+
+                <img src="/images/gallery6.webp"
+                    class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title text-center">Get in Touch</h2>
+            <p class="fs-2"><strong>Mow-N-Edge Corporation</strong></p>
+            <p class="fs-4">4397 N Valentine Ave, Fresno, CA 93722</p>
+            <a href="tel:5592941103" class="btn btn-primary btn-lg">Call Us: (559) 294-1103</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Mow-N-Edge</h5>
+                    <p>Professional lawn care services for your home.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hours</h5>
+                    <p>Mon - Fri: 09:00am - 05:00pm<br>Sat - Sun: Closed</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Phone: (559) 294-1103</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
